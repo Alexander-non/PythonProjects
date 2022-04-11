@@ -1,14 +1,17 @@
 import random
-num = 2 ** 100
-x = random.randint(1, num)
-starterNumber = x
+start = str(input("Would you like to use a random number or go with a custom number? (r | c): "))
+if start == "r":
+    randomNumber = random.randint(1, 2 ** 100)
+elif start == "c":
+    randomNumber = int(input("Valid number: "))
+starterNumber = randomNumber
 while True:
-    print(x)
-    if x == 1:
-        print("End, Start number:", starterNumber)
+    print(randomNumber)
+    if randomNumber == 1:
+        print("End, Kezdő szám:", starterNumber)
         break
     else:
-        if x % 2 == 0:
-            x = x / 2
-        elif x % 2 != 0:
-            x = ((x*3) + 1)
+        if randomNumber % 2 == 0:
+            randomNumber = randomNumber / 2
+        elif randomNumber % 2 != 0:
+            randomNumber = ((randomNumber*3) + 1)
