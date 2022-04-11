@@ -5,7 +5,7 @@ starterNumber = x
 while True:
     print(x)
     if x == 1:
-        print("End, Kezdő szám:", starterNumber)
+        print("End, Start number:", starterNumber)
         break
     else:
         if x % 2 == 0:
